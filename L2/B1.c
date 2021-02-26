@@ -3,7 +3,7 @@
 #include <math.h>
 int main()
 {
-	int N,v[100],i,j,p,k,nr;
+	int N,v[100],i,j,p,k;
 	
 	printf("Introduceti numarul de numere ");
 	scanf("%d", &N);
