@@ -3,7 +3,6 @@
 
 int GetFlag(int n)
 {
-	((n&(1 << 31)) == (1 << 31));
 	return (1 & (n >> 31));
 }
 
