@@ -3,7 +3,6 @@
 
 int GetFlag(int n)
 {
-	((n&1) == 1);
 	return (1 & n);
 }
 int main()
