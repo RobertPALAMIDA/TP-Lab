@@ -4,7 +4,6 @@
 
 int GetFlag(int n, int k)
 {
-	((n&(1 << k)) == (1 << k));
 	return (1 & (n >> k));
 }
 
