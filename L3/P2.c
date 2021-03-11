@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct binar {
+typedef struct binar 
+{
 	int bit;
 	struct binar *urm;
 }nod;
@@ -13,16 +14,16 @@ nod *adaugareInFata(nod *prim, int *bit)
 	p = (nod *)malloc(sizeof(nod));
 	p->bit = bit;
 	p->urm = NULL;
-	if (p == NULL)
-		printf("EROARE la alocarea memoriei");
-	else
-		if (prim == NULL)
-			return p;
+		if (p == NULL)
+			printf("EROARE la alocarea memoriei");
 		else
-		{
-			p->urm = prim;
-			return p;
-		}
+			if (prim == NULL)
+				return p;
+			else
+			{
+				p->urm = prim;
+				return p;
+			}
 	return 0;
 }
 
@@ -31,7 +32,8 @@ void afisareLista(nod *prim)
 {
 	nod *p;
 	p = prim;
-	while (p != NULL) {
+	while (p != NULL) 
+	{
 		printf("%d", p->bit);
 		p = p->urm;
 	}
@@ -47,11 +49,12 @@ int main()
 	nod *prim;
 	prim = NULL;
 	int k, nr, i, bit;
-	printf("Dati numarul ");
+	printf("Dati numarul nr= ");
 	scanf("%d", &nr);
 	for (i = 0; i <= 7; i++)
 		if (GetFlag(nr, i))
 			k = i;
+	printf("Reprezentarea binara  numarului %d este ", nr);
 	for (i = 0; i <= k; i++)
 	{
 		if (GetFlag(nr, i))
