@@ -24,7 +24,6 @@ nod *adaugareInFata(nod *prim, int *bit)
 				p->urm = prim;
 				return p;
 			}
-	return 0;
 }
 
 
