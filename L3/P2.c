@@ -50,7 +50,7 @@ int main()
 	int k, nr, i, bit;
 	printf("Dati numarul nr= ");
 	scanf("%d", &nr);
-	for (i = 0; i <= 7; i++)
+	for (i = 0; i <= 31; i++)
 		if (GetFlag(nr, i))
 			k = i;
 	printf("Reprezentarea binara  numarului %d este ", nr);
