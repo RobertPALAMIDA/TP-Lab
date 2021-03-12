@@ -35,22 +35,24 @@ int GetTop()
 
 int main()
 {
-	int x,ok=0,k;
+	int x, ok = 0, k;
 	printf("Introduceti un numar x= ");
 	scanf("%d", &x);
 	push(x);
 	while (ok == 0)
 	{
-		if (GetTop()>=20)
+		if (GetTop() >= 20)
 		{
+			pop();
 			x = x - 3;
 			push(x);
 			ok = 1;
 		}
-		
+
 		else if (GetTop() > 12 && GetTop() < 20)
 		{
-			x = x + 1;		
+			pop();
+			x = x + 1;
 			push(x);
 		}
 		else
@@ -60,23 +62,26 @@ int main()
 
 			if (GetTop() >= 20)
 			{
+				pop();
 				x = x - 3;
 				push(x);
 			}
 			else if (GetTop() > 12 && GetTop() < 20)
 			{
+				pop();
 				x = x + 1;
 				push(x);
 			}
 			else
 			{
+				pop();
 				x = pow(x, 2);
 				push(x);
 			}
 		}
 
 	}
-	printf("%d", pop());
+	printf("%d\n", pop());
 	system("pause");
 	return 0;
 }
