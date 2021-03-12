@@ -55,8 +55,10 @@ int main()
 			x = x + 1;
 			push(x);
 		}
+
 		else
 		{
+			pop();
 			x = pow(x, 2);
 			push(x);
 
@@ -81,7 +83,8 @@ int main()
 		}
 
 	}
-	printf("%d\n", pop());
+	printf("Valoarea lui f(x) este %d\n", pop());
+	printf("%d\n", v[0]);//verificare daca stiva este goala
 	system("pause");
 	return 0;
 }
