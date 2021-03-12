@@ -35,27 +35,23 @@ int main()
 }*/
 
 //PROGRAM 2 (program care insumeaza elementele intr-o metoda separate de metoda main, folosind transmiterea prin referinta.)
-/*int sumaREF(int *v, int n)
+/*int sumaREF(int *a, int *b)
 {
-	int i, s;
+	int  s;
 	s = 0;
-	for (i = 0; i < n; i++)
-		s = s + v[i];
+	s = *a + *b;
 
-		return s;
+	return s;
 }
 int main()
 {
-	int n, i,s, *v;
-	printf("Dati numarul de elemente ale vectorului ");
-	scanf("%d", &n);
-	v = (int *)malloc(n * sizeof(int));
-	for (i = 0; i < n; i++)
-	{
-		printf("Dati v[%d]=", i);
-		scanf("%d", &v[i]);
-	}
-	s = sumaREF(v, n);
+	int s, a, b;
+	printf("Dati a=");
+	scanf("%d", &a);
+	printf("Dati b=");
+	scanf("%d", &b);
+
+	s = sumaREF(&a, &b);
 	printf("Suma elementelor este %d \n", s);
 
 	system("pause");
