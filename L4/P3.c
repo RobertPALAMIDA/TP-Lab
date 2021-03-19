@@ -77,7 +77,7 @@ int GetFlag(int n, int k)
 	return (1 & (n >> k));
 }
 
-void main()
+int main()
 {
 	int N, x[10], i,nr=0;
 	printf("Introduceti numarul de cifre ");
