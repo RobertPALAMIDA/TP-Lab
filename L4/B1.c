@@ -55,14 +55,14 @@ void printStack()
 	int i = 0;
 	for (i = 0; i <= varf; i++)
 	{
-		printf("%d\n", V[i]);
+		printf("%d", V[i]);
 	}
 	printf("\n");
 }
 
 void golireStiva()
 {
-	int i,n;
+	int i, n;
 	n = varf;
 	for (i = 0; i <= n; i++)
 		varf--;
@@ -75,8 +75,8 @@ int GetFlag(int n, int k)
 
 void main()
 {
-	int n, x[100],i,j,k;
-	
+	int n, x[100], i, j;
+
 	printf("Dati numarul de elemente ");
 	scanf("%d", &n);
 	for (i = 0; i < n; i++)
@@ -90,19 +90,18 @@ void main()
 		for (j = 7; j >= 0; j--)
 		{
 			if (GetFlag(x[i], j))
+			{
+				Push(0);
 				printf("%c", '1');
+			}
 			else
+			{
+				Push(1);
 				printf("%c", '0');
-		}
-		for (k = 0; k <= 7; k++)
-		{
-				if (GetFlag(x[i], k))
-					Push(1);
-				else
-					Push(0);
+			}
 		}
 		printf("\n");
-		printf("Forma inversa binara este:\n");
+		printf("Forma inversa binara este:");
 		printStack();
 		golireStiva();
 		printf("---------------------------------------- \n");
