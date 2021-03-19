@@ -40,7 +40,7 @@ int GetFlag(int n, int k)
 	return (1 & (n >> k));
 }
 
-void main()
+int main()
 {
 	int n,v[100], C, i,ok=0;
 	while (!ok)
