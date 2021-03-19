@@ -45,11 +45,6 @@ int IsFull()
 	return 0;
 }
 
-int GetTop()
-{
-	return V[varf];
-}
-
 void printStack()
 {
 	int i = 0;
