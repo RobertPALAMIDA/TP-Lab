@@ -107,7 +107,7 @@ int main()
 	for (i = 1; i <= lung; i++)
 	{
 		ciphersize = i;
-		Back(i);
+		Back();
 	}
 	system("pause");
 	return 0;
