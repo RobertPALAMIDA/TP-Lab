@@ -6,7 +6,7 @@ int v[20], n;
 
 int max_suma_subsir(int li, int ls)
 {
-	int mij,suma_maxima_stanga,suma_maxima_dreapta,suma_maxima_intre;
+	int mij, suma_maxima_stanga, suma_maxima_dreapta, suma_maxima_intre;
 
 	if (li == ls)
 	{
@@ -16,14 +16,14 @@ int max_suma_subsir(int li, int ls)
 
 	mij = (li + ls) / 2;
 
-	
+
 	suma_maxima_stanga = max_suma_subsir(li, mij);
-	
+
 	suma_maxima_dreapta = max_suma_subsir(mij + 1, ls);
-	
+
 	suma_maxima_intre = max_intre(li, mij, ls);
 
-	
+
 	return maximum(suma_maxima_stanga, suma_maxima_dreapta, suma_maxima_intre);
 }
 
@@ -38,10 +38,9 @@ int maximum(int a, int b, int c)
 
 int max_intre(int li, int mij, int ls)
 {
-
-	int suma_stanga = -1000000;
-	int suma = 0;
-	int i;
+	int suma_stanga, suma_dreapta, suma, i;
+	suma_stanga = -1000000;
+	suma = 0;
 
 	for (i = mij; i >= li; i--)
 	{
@@ -50,8 +49,8 @@ int max_intre(int li, int mij, int ls)
 			suma_stanga = suma;
 	}
 
-	
-	int suma_dreapta = -1000000;
+
+	suma_dreapta = -1000000;
 	suma = 0;
 
 	for (i = mij + 1; i <= ls; i++)
@@ -71,7 +70,7 @@ int main()
 	scanf("%d", &n);
 	for (i = 0; i < n; i++)
 		scanf("%d", &v[i]);
-	printf("Suma maxima obtinuta este %d\n", max_suma_subsir(0,n-1));
+	printf("Suma maxima obtinuta este %d\n", max_suma_subsir(0, n - 1));
 	system("pause");
 	return 0;
 }
